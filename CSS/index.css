@@ -1,0 +1,131 @@
+.nav2 a:hover{
+    background-color: lightgray;
+}
+.nav3{
+    margin-left: -90px;
+    height: 500px;
+    overflow-y: scroll;
+}
+.nav3 a{
+    border-bottom: 0.5px solid rgb(172, 172, 172);
+    padding: 13px;
+}
+.sidemenu{
+    border: 1px solid rgba(213, 209, 209, 0.647);
+    height: 500px;
+    overflow-y:scroll;
+    scrollbar-width:none ;
+  
+}
+.sidemenu a:hover{
+    
+    background-color: rgba(127, 255, 212, 0.274);
+
+}
+.sidemenu a{
+   
+    border-bottom: 0.5px solid rgba(204, 209, 206, 0.756);
+    padding: 10px;
+}
+.sidemenu img{
+    margin-top: 10px;
+}
+.box{
+    margin: auto;
+    transition: 0.5s;
+}
+.shopping{
+    position: relative;
+    text-align: right;
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 15px;
+    row-gap:10px;
+    margin-top: 50px;
+}
+.cart-h5{
+    color:#E8BC0E;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 20px;
+    height: 0px;
+    display: flex;
+    align-items: center;
+
+}
+
+.card .checkout{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+}
+.card .checkout div{
+    background-color:#E8BC0E; 
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card .checkout div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+
+/* .active .card{
+    left:calc(100%-500px)
+} */
+/* .active .box{
+    transform: translate(-200px);
+} */
+.list{
+    border-radius: 5px;
+}
+.list .item{
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 10px 10px #757676;
+    letter-spacing: 1px;
+}
+.list .item img{
+    width: 90%;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item button{
+    width: 100%;
+    font-weight: 700;
+}
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3,1fr);
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+}
+.listCard button{
+    width: auto;
+    border: none;
+}
+.listCard .count{
+    margin:  0 10px;
+}
