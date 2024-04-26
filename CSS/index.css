@@ -2,7 +2,7 @@
     background-color: lightgray;
 }
 .nav3{
-    margin-left: -90px;
+    margin-left: 0px;
     height: 500px;
     overflow-y: scroll;
 }
@@ -128,4 +128,7 @@
 }
 .listCard .count{
     margin:  0 10px;
+}
+.modal-backdrop{
+    z-index: 0;
 }
