@@ -7,6 +7,27 @@ let total=document.querySelector('.total')
 let quantity=document.querySelector('.quantity')
 
 
+//search
+const place=["butter","sugar","milk","salt","egg","rice","chips","tea","coffee"]
+let index=0;
+const animatedplaceholder=document.getElementById("animatedplaceholder");
+
+
+function movingPlaceholder(){
+    animatedplaceholder.style.animation='changeValue 0.5s forwards';
+
+    setTimeout(()=>{
+        index=(index+1) % place.length;
+        animatedplaceholder.textContent=` Search "${place[index]} "`;
+        animatedplaceholder.style.animation='InchangeValue 0.5s forwards'
+    },400)
+}
+movingPlaceholder()
+
+setInterval(movingPlaceholder,3000)
+
+
+
 openShopping.addEventListener('click',()=>{
     body.classList.add('active')
 })
@@ -52,10 +73,73 @@ let products=[
     },
     {
         id:6,
+        name:'Garlic (Lasun)',
+        image:'../image/image/Garlic (Lasun).jpg',
+        weight:'1kg',
+        price:45
+    },
+    {
+        id:7,
         name:'English Cucumber(Kheera)',
         image:'../image/image/Ginger (Ale).jpg',
         weight:'1kg',
-        price:45
+        price:90
+    },
+    {
+        id:8,
+        name:'Freshly Cut & Sprouts',
+        image:'../image/image/Fresh Vegetables.png',
+        weight:'1kg',
+        price:145
+    },
+    {
+        id:9,
+        name:'Leafies & Herbs',
+        image:'../image/image/Leafies & Herbs.jpg',
+        weight:'1kg',
+        price:80
+    },
+    {
+        id:10,
+        name:'Lemon',
+        image:'../image/image/lemon.jpg',
+        weight:'1kg',
+        price:80
+    },
+    {
+        id:11,
+        name:'Onion',
+        image:'../image/image/onion.jpg',
+        weight:'1kg',
+        price:180
+    },
+    {
+        id:12,
+        name:'Potato',
+        image:'../image/image/potato.jpg',
+        weight:'1kg',
+        price:120
+    },
+    {
+        id:13,
+        name:'Mirchi',
+        image:'../image/image/mirchi.jpg',
+        weight:'1kg',
+        price:40
+    },
+    {
+        id:14,
+        name:'Lady Finger',
+        image:'../image/image/lady-finger.jpg',
+        weight:'1kg',
+        price:40
+    },
+    {
+        id:15,
+        name:'French Fresh Beans (Farasbi).jpg',
+        image:'../image/image/French Fresh Beans (Farasbi).jpg',
+        weight:'1kg',
+        price:30
     },
 ];
 let listCards=[]
@@ -121,3 +205,19 @@ function changequantity(key,quantity){
     }
     reloadCart()
 }
+
+var btn=$('#button')
+
+$(window).scroll(function(){
+    if($(window).scrollTop()>300){
+        btn.addClass('show')
+    }
+    else{
+        btn.removeClass('show')
+    }
+})
+
+btn.on('click',function(e){
+    e.preventDefault()
+    $('html,body').animate({scrollTop:0},'300')
+})
